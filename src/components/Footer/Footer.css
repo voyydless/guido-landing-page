@@ -1,0 +1,26 @@
+.footer {
+    text-align: center;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.footer .navbar{
+    text-align: center;
+    color: var(--blue);
+}
+
+.footer .navbar a {
+    line-height: 160%;
+    font-size: 1.7rem;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.footer .navbar a:hover {
+    color: #253c5b;
+}
+
+#copyright {
+    text-align: center;
+    margin: 0.5rem;
+}
