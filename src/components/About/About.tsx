@@ -4,6 +4,10 @@ import './About.css';
 const About: React.FC = () => {
   const [showInfo, setShowInfo] = useState(false);
 
+  const handleToggle = () => {
+    setShowInfo(!showInfo);
+  };
+
   return (
     <section className="about" id="about">
       <h1 className="heading">Sobre Nós</h1>
@@ -12,17 +16,35 @@ const About: React.FC = () => {
           <img src="/assets/images/guido1.png" alt="Guido" />
         </div>
         <div className="content">
-          <input id="ch" type="checkbox" checked={showInfo} onChange={() => setShowInfo(!showInfo)} />
+          <input 
+          id="coffee-info" 
+          type="checkbox" 
+          checked={showInfo} 
+          onChange={(e) => setShowInfo(e.target.checked)} 
+          style={{ display: 'none'}}/>
           <h3 className="title">Afinal, por que Guido?</h3>
-          <p>Quando decidimos abrir o café, tínhamos muito claro qual seria o seu conceito...</p>
+          <p>Quando decidimos abrir o café, tínhamos muito claro qual seria o seu conceito: um café com memória afetiva, carismático, basicão e acolhedor para todos. Quer dizer, queríamos um "café vira-lata". Testamos vários nomes até percebermos que nossa inspiração estava dentro da nossa própria casa: <strong>Guido!</strong> Nosso vira-lata carismático.</p>
+
+          {!showInfo && (
+          <button
+            className="toggle-info"
+            onClick={handleToggle}>
+            E o nosso café?
+          </button>
+          )}
           {showInfo && (
             <div className="info">
               <img src="/assets/images/grao.png" id="grao" alt="Grão de café" />
-              <p>(Imagine informações sobre café aqui.)</p>
-              <label htmlFor="ch" onClick={() => setShowInfo(false)}>Mostrar menos</label>
+              <p>(Imagine informações sobre café aqui.)
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit enim, eleifend ac libero at, scelerisque vestibulum dui. Curabitur at mi a augue varius posuere. Nullam nec lacus et quam vulputate mattis. Donec fermentum sem at dignissim porttitor. Aliquam eget sapien id ligula tristique semper. Nunc lorem leo, blandit eu nisl sed, viverra consectetur augue. Quisque id dictum velit.
+              </p>
+              <button 
+              className="toggle-info"
+              onClick={handleToggle}>
+                Mostrar menos
+              </button>
             </div>
           )}
-          <label htmlFor="ch" onClick={() => setShowInfo(true)}>E o nosso café?</label>
         </div>
         <h3 id="parceiros">Em parceiria com:</h3>
         <div className="parceiros">

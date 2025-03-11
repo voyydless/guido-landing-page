@@ -2,7 +2,7 @@
     align-items: center;
     text-align: justify;
     gap: 1.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .about .row .image img{
@@ -36,37 +36,38 @@
     font-family: 'Cooper';
 }
 
-#ch {
-    display: none;
-}
-
-#ch:checked ~ .info {
-    display: block;
-}
-
-#ch:checked ~ label {
-    display: none;
-}
-
-.info {
-    display: none;
-}
-
-label {
+.toggle-info {
     display: inline-block;
     padding: .5rem 2rem;
     font-size: 1.5rem;
     color: var(--blue);
     background-color: var(--white);
     border: 2px solid var(--blue);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     cursor: pointer;
-}
-
-label:hover {
+  }
+  
+  .toggle-info:hover {
     color: var(--white);
     background-color: var(--blue);
-}
+  }
+  
+  .info {
+    animation: fadeIn 0.3s ease-in;
+    border-radius: 4px;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .info .toggle-info {
+    margin-top: 1rem;
+    display: block;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
 #grao {
     float: right;
@@ -76,10 +77,65 @@ label:hover {
 #parceiros {
     font-size: 2rem;
     color: var(--black);
+    margin-top: 1rem;
 }
 
 .about .row .parceiros{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+@media (max-width: 991px) {
+    .about .parceiros img {
+        width: 120px;
+        }
+}
+
+@media (max-width: 768px) {
+    .about .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .about .row .image img {
+        float: none;
+        display: block;
+        width: 75%;
+        margin: 0 auto 2rem;
+        border: 3px solid var(--blue);
+        border-radius: 20px 100px;
+        box-shadow: 0 6px var(--blue);
+    }
+
+    .about .row .content {
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 0;
+    }
+
+    .about .row .content p {
+        text-align: justify;
+        font-size: 1.5rem;
+        line-height: 1.8;
+        padding: 1rem 0;
+        
+    }
+
+    .toggle-info {
+        margin: 0.5rem 0;  /* Consistent margin top and bottom */
+    }
+
+    .about .row .parceiros {
+        margin-top: 0.5rem;
+        padding-top: 0;
+    }
+
+    #parceiros {
+        margin-top: 0.5rem;  /* Override for mobile */
+    }
+    
 }

@@ -161,13 +161,26 @@
 }
 
 @media (max-width: 768px) {
+  .tab button {
+    font-size: 2rem;
+    padding: 10px 30px;  /* Reduced padding to fit buttons */
+  }
+
+  .tabcontent {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
   .menu-grid {
     grid-template-columns: 1fr;
     }
+
   #filtrados .top-row {
     grid-template-columns: 1fr;
   }
+
   #filtrados .bottom-row {
     grid-template-columns: 1fr;
   }
+
   }
