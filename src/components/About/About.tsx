@@ -22,7 +22,7 @@ const About: React.FC = () => {
           checked={showInfo} 
           onChange={(e) => setShowInfo(e.target.checked)} 
           style={{ display: 'none'}}/>
-          <h3 className="title">Afinal, por que Guido?</h3>
+          <h2>Afinal, por que Guido?</h2>
           <p>Quando decidimos abrir o café, tínhamos muito claro qual seria o seu conceito: um café com memória afetiva, carismático, basicão e acolhedor para todos. Quer dizer, queríamos um "café vira-lata". Testamos vários nomes até percebermos que nossa inspiração estava dentro da nossa própria casa: <strong>Guido!</strong> Nosso vira-lata carismático.</p>
 
           {!showInfo && (
@@ -45,8 +45,8 @@ const About: React.FC = () => {
               </button>
             </div>
           )}
+          <h2>Em parceiria com:</h2>
         </div>
-        <h3 id="parceiros">Em parceiria com:</h3>
         <div className="parceiros">
           <a href="https://loja.badentorrefacao.com.br" target="_blank" rel="noopener noreferrer" className="item">
             <img src="/assets/images/icon_baden.png" width="200px" alt="Baden" />

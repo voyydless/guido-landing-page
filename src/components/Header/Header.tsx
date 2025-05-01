@@ -17,16 +17,13 @@ const Header: React.FC = () => {
       </a>
       <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
         <a href="#home">Home</a>
-        <a href="#sobre">Sobre Nós</a>
+        <a href="#about">Sobre Nós</a>
         <a href="#cardapio">Cardápio</a>
         <a href="#localizacao">Localização</a>
         <a href="#footer">Contato</a>
       </nav>
-      <a href="#" className="logo1">
-        <img src="/assets/images/logo1.png" width="150px" alt="Logo 1" />
-      </a>
       <a href="#" className="logo2">
-        <img src="/assets/images/logo2.png" width="50px" alt="Logo 2" />
+        <img src="/assets/images/logo2.png" width="55px" alt="Logo" />
       </a>
     </header>
   );

@@ -14,20 +14,13 @@
 }
 
 .logo2{
-    display: none;
+    display: block;
 }
-
-.header h1 {
-    font-family: 'Lilita One', cursive;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-    color: var(--white);
-}
-
 
 .header .navbar a {
     margin: 0 1rem;
     font-size: 1.7rem;
+    padding: 0.5rem;
     color: var(--white);   
     transition: color 0.3s;
 }
@@ -41,15 +34,6 @@
     color: var(--white);
     cursor: pointer;
     display: none;
-}
-
-@media (max-width: 991px) {
-    .logo1{
-        display: none;
-    }
-    .logo2{
-        display: block;
-    }
 }
 
 @media (max-width: 768px) {

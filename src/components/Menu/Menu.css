@@ -1,6 +1,6 @@
 .menu {
   margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0;
 }
 
 .tab {
@@ -69,6 +69,7 @@
 
 #leite {
   margin-top: 0.5rem;
+  margin-bottom: 0;
   font-size: 1.5rem;
 }
 
