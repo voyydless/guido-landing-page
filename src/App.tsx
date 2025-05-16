@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -10,6 +11,9 @@ import './styles/global.css';
 const App: React.FC = () => {
   return (
     <div className="App">
+      <Helmet>
+        <title>Guido</title>
+      </Helmet>
       <Header />
       <Home />
       <About />
