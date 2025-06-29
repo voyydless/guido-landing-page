@@ -39,7 +39,7 @@ section {
     text-align: center;
     pointer-events: none;
     position: relative;
-    margin-bottom: rem;
+    margin-bottom: 2.5rem;
 }
 
 ::-webkit-scrollbar {

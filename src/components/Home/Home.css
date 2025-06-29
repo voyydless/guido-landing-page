@@ -1,4 +1,3 @@
-
 .home {
     min-height: 100vh;
     padding-top: 12rem;
@@ -15,13 +14,13 @@
     flex: 1 1 42rem;
 }
 
-.home .row .content h3 {
+.home h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
     letter-spacing: 1px;
     text-align: center;
     justify-content: center;
-    margin-top: 25rem;
+    margin: 25% auto;
     color: var(--white);
     text-shadow: 1px 0 10px #000;
 }
